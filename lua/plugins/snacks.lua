@@ -1,23 +1,35 @@
 return {
   {
     "folke/snacks.nvim",
-    -- event = "VeryLazy",
-    ---@type snacks.Config
+    priority = 1000,
+    lazy = false,
     opts = {
       bigfile = { enabled = true },
       indent = { enabled = true },
       input = { enabled = true },
-      notify = { enabled = false },
-      notifier = { enabled = false },
+      notifier = { enabled = true },
       quickfile = { enabled = true },
       scroll = { enabled = true },
       lazygit = { enabled = true },
       dashboard = {
         enabled = true,
-        -- your dashboard configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-
+        preset = {
+          keys = {
+            { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+            -- { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+            { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+            -- {
+            --   icon = " ",
+            --   key = "c",
+            --   desc = "Config",
+            --   action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+            -- },
+            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+            -- { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+            { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+          },
+        },
         formats = {
           key = function(item)
             return {
@@ -30,8 +42,8 @@ return {
         sections = {
           {
             section = "terminal",
-            -- cmd = "curl https://cows.rest/api/cowsay",
-            cmd = "fortune -s | cowsay",
+            cmd = "curl https://cows.rest/api/cowsay",
+            -- cmd = "fortune -s | cowsay",
             hl = "header",
             padding = 1,
             indent = 8,
@@ -44,8 +56,19 @@ return {
           { section = "projects", padding = 1 },
           { title = "Bookmarks", padding = 1 },
           { section = "keys" },
+          { title = "", padding = 1 },
+          { section = "startup" },
         },
       },
     },
+    config = function(_, opts)
+      local notify = vim.notify
+      require("snacks").setup(opts)
+      -- HACK: restore vim.notify after snacks setup and let noice.nvim take over
+      -- this is needed to have early notifications show up in noice history
+      -- if LazyVim.has("noice.nvim") then
+      vim.notify = notify
+      -- end
+    end,
   },
 }

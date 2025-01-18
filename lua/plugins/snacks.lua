@@ -7,7 +7,7 @@ return {
       bigfile = { enabled = true },
       indent = { enabled = true },
       input = { enabled = true },
-      notifier = { enabled = true },
+      -- notifier = { enabled = true },
       quickfile = { enabled = true },
       scroll = { enabled = true },
       lazygit = { enabled = true },

@@ -1,5 +1,5 @@
 return {
-    {
+  {
     "mbbill/undotree",
     event = "User IceLoad",
     cmd = "UndotreeToggle", -- 按需加载，使用 :UndotreeToggle 命令时加载插件
@@ -10,4 +10,4 @@ return {
       vim.g.undotree_SetFocusWhenToggle = 1 -- 打开时自动聚焦到 undotree 窗口
     end,
   },
-  }
+}

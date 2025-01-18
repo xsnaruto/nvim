@@ -18,7 +18,7 @@
   "nvim-treesitter": { "branch": "master", "commit": "5da195ac3dfafd08d8b10756d975f0e01e1d563a" },
   "nvim-web-devicons": { "branch": "master", "commit": "aafa5c187a15701a7299a392b907ec15d9a7075f" },
   "onedarkpro.nvim": { "branch": "main", "commit": "0feb5f55dd777352f2dddd7478dd13d050864ee3" },
-  "snacks.nvim": { "branch": "main", "commit": "74feefc52284e2ebf93ad815ec5aaeec918d4dc2" },
+  "snacks.nvim": { "branch": "main", "commit": "d515e0d1405cdfacb8babf6b3b4a238a3156607a" },
   "trouble.nvim": { "branch": "main", "commit": "50481f414bd3c1a40122c1d759d7e424d5fafe84" },
   "undotree": { "branch": "master", "commit": "2556c6800b210b2096b55b66e74b4cc1d9ebbe4f" },
   "which-key.nvim": { "branch": "main", "commit": "1f8d414f61e0b05958c342df9b6a4c89ce268766" }

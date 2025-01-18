@@ -1,5 +1,5 @@
 return {
-    {
+  {
     "stevearc/conform.nvim",
     branch = "nvim-0.9",
     -- branch = "master",
@@ -96,4 +96,4 @@ return {
       end, { desc = "Format current buffer with Conform" })
     end,
   },
-  }
+}

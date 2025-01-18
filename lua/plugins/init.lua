@@ -66,6 +66,7 @@ return {
           { section = "projects", padding = 1 },
           { title = "Bookmarks", padding = 1 },
           { section = "keys" },
+          { section = "startup" },
         },
       },
     },

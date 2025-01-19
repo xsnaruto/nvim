@@ -3,6 +3,12 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
+      routes = {
+        {
+          view = "notify",
+          filter = { event = "msg_showmode" },
+        },
+      },
       cmdline = {
         view = "cmdline",
         format = {
@@ -12,6 +18,7 @@ return {
           -- icon_hl_group: optional hl_group for the icon
           -- title: set to anything or empty string to hide
           cmdline = { pattern = "^:", icon = " ", lang = "vim" },
+          -- macros = { pattern = "^q", icon = " ", lang = "vim" },
         },
       },
       presets = {

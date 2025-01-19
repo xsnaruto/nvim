@@ -12,6 +12,7 @@ return {
       scroll = { enabled = true },
       lazygit = { enabled = true },
       picker = { enabled = true },
+      toggle = { enabled = true },
       dashboard = {
         enabled = true,
         preset = {

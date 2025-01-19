@@ -1,11 +1,10 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    event = "User IceLoad",
+    -- event = "User IceLoad",
+    event = "BufRead",
     dependencies = {
       "saghen/blink.cmp",
-      -- "williamboman/mason.nvim",
-      -- "williamboman/mason-lspconfig.nvim",
     },
 
     -- example using `opts` for defining servers
@@ -24,24 +23,6 @@ return {
     },
 
     config = function(_, opts)
-      -- -- Mason 基础设置
-      -- require("mason").setup()
-      -- -- LSP 服务器设置
-      -- require("mason-lspconfig").setup({
-      --   ensure_installed = {
-      --     "bashls",
-      --     "html",
-      --     "cssls",
-      --     "vtsls",
-      --     "jsonls",
-      --     "yamlls",
-      --     "lua_ls",
-      --     "pyright",
-      --     "nginx_language_server",
-      --   },
-      --   automatic_installation = true,
-      -- })
-
       local lspconfig = require("lspconfig")
       for server, config in pairs(opts.servers) do
         -- passing config.capabilities to blink.cmp merges with the capabilities in your

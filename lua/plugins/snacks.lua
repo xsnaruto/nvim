@@ -5,7 +5,15 @@ return {
     lazy = false,
     opts = {
       bigfile = { enabled = true },
-      indent = { enabled = true },
+      indent = {
+        enabled = true,
+        exclude = {
+          filetypes = {
+            "markdown",
+          },
+        },
+      },
+      scope = { enabled = true },
       input = { enabled = true },
       -- notifier = { enabled = true },
       quickfile = { enabled = true },

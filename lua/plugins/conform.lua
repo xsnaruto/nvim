@@ -1,10 +1,46 @@
 return {
   {
     "stevearc/conform.nvim",
-    branch = "nvim-0.9",
+    -- branch = "nvim-0.9",
     -- branch = "master",
     event = "User IceLoad",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
+    },
     config = function()
+      -- -- 通过 mason 安装 formatter
+      -- require("mason-tool-installer").setup({
+      --   ensure_installed = {
+      --     -- Language server
+      --     -- "pyright", -- Python
+      --     -- "html-lsp",
+      --     -- "css-lsp",
+      --     -- "json-lsp",
+      --     -- "lua-language-server", -- Lua
+      --     -- "bash-language-server",
+      --     -- "yaml-language-server",
+      --     -- "nginx-language-server",
+      --     -- "typescript-language-server",
+      --     -- "rust-analyzer",
+      --     -- Formatters
+      --     "prettier",
+      --     "shfmt", -- Shell
+      --     "xmlformatter", -- XML
+      --     "stylua", -- Lua
+      --     "rubyfmt", -- Ruby
+      --     "rustfmt", -- Rust
+      --     "black", -- Python
+      --     "clang-format", -- C/C++
+      --     "goimports", -- Go
+      --     "ktlint", -- Kotlin
+      --     "phpcbf", -- PHP
+      --   },
+      --   -- auto_update = true,
+      --   run_on_start = true,
+      --   start_delay = 3000, -- 3 second delay
+      -- })
+
       -- Conform 配置
       require("conform").setup({
         -- Set default options
@@ -13,7 +49,7 @@ return {
         },
         -- 为不同文件类型设置格式化工具
         formatters_by_ft = {
-          ["_"] = { "indent" },
+          -- ["_"] = { "indent" },
 
           html = { "prettier" },
           css = { "prettier" },

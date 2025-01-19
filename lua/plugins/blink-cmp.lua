@@ -1,8 +1,12 @@
 return {
   {
     "saghen/blink.cmp",
+    -- event = "User IceLoad",
+    lazy = true,
     -- optional: provides snippets for the snippet source
-    dependencies = "rafamadriz/friendly-snippets",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+    },
 
     -- use a release tag to download pre-built binaries
     version = "*",
@@ -22,6 +26,9 @@ return {
         preset = "enter",
         ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
         ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+        cmdline = {
+          preset = "enter",
+        },
       },
 
       completion = {

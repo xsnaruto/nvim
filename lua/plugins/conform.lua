@@ -111,12 +111,12 @@ return {
               -- "2",
             },
           },
-          stylua = {
-            prepend_args = {
-              "--indent-type=spaces",
-              "--indent-width=2",
-            },
-          },
+          -- stylua = {
+          --   prepend_args = {
+          --     "--indent-type=spaces",
+          --     "--indent-width=2",
+          --   },
+          -- },
           nginxfmt = {
             command = "nginxfmt",
             args = { "-" }, -- 使用单个短横线而不是 --pipe

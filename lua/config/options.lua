@@ -8,9 +8,9 @@ vim.opt.fileencoding = "utf-8"
 -- 显示设置
 vim.opt.list = true
 vim.opt.listchars = {
-  tab = "» ",
-  trail = "·",
-  nbsp = "␣",
+	tab = "» ",
+	trail = "·",
+	nbsp = "␣",
 }
 vim.opt.syntax = "on"
 vim.opt.background = "dark"
@@ -20,13 +20,18 @@ vim.opt.termguicolors = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- 缩进设置
+-- ----------------------------------
+-- 默认缩进，4 格空格，Tab 自动转空格
+-- 部分语言会动态使用 2格空格执行缩进
+-- 具体请参考 autocmds.lua 文件自定义
+-- ----------------------------------
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+vim.opt.smarttab = true
+vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
 
 -- 显示设置
 -- vim.opt.fillchars:append("eob: ")

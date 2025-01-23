@@ -4,7 +4,7 @@ return {
 		event = "User IceLoad",
 		version = false, -- set this if you want to always pull the latest change
 		opts = {
-			provider = "openai",
+			provider = "gemini",
 			auto_suggestions_provider = "copilot",
 			openai = {
 				endpoint = "https://api.deepseek.com/v1",
@@ -13,6 +13,14 @@ return {
 				temperature = 0,
 				max_tokens = 4096,
 				api_key_name = "DEEPSEEK_API_KEY",
+			},
+			gemini = {
+				-- endpoint = "https://generativelanguage.googleapis.com",
+				model = "gemini-2.0-flash-exp",
+				timeout = 30000, -- Timeout in milliseconds
+				temperature = 0,
+				max_tokens = 4096,
+				api_key_name = "GEMINI_API_KEY",
 			},
 		},
 		build = "make",

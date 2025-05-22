@@ -39,7 +39,7 @@ return {
           "clang-format", -- C/C++
           -- "goimports", -- Go
           "google-java-format", -- Java
-          "ktlint", -- Kotlin
+          -- "ktlint", -- Kotlin
           "phpcbf", -- PHP
         },
         auto_update = true,

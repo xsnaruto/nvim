@@ -52,8 +52,8 @@ return {
         sections = {
           {
             section = "terminal",
-            cmd = "curl https://cows.rest/api/cowsay",
-            -- cmd = "fortune -s | cowsay",
+            -- cmd = "curl https://cows.rest/api/cowsay",
+            cmd = "fortune -s | cowsay",
             hl = "header",
             padding = 1,
             indent = 8,
